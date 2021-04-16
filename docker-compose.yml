@@ -1,0 +1,12 @@
+version: '2'
+services:
+    php7apache:
+        build: .
+        environment:
+            - UUID:1000
+            - GUID:120
+        ports:
+            - 7180:80
+        volumes:
+            - /srv/drive-sda/phpapps/php71Apache:/var/www/html:cached
+            - /srv/drive-sda/phpapps/logs/php71Apache/symfony:/var/www/html/var/logs:cached
